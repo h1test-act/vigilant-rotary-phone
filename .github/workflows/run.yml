@@ -1,0 +1,655 @@
+name: RunCMD
+
+
+
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+
+
+# events but only for the master branch
+
+
+
+on:
+  schedule:
+    - cron: '0 0 */3 * *'
+
+
+  workflow_dispatch:
+
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+
+jobs:
+
+  # This workflow contains a single job called "build"
+
+
+  runcmd1:
+    continue-on-error: true
+    
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
+  runcmd2:
+    needs: [runcmd1]
+    continue-on-error: true
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
+  runcmd3:
+    needs: [runcmd2]
+    continue-on-error: true
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
+  runcmd4:
+    needs: [runcmd3]
+    continue-on-error: true
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
+  runcmd5:
+    needs: [runcmd4]
+    continue-on-error: true
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
+  runcmd6:
+    needs: [runcmd5]
+    continue-on-error: true
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
+  runcmd7:
+    needs: [runcmd6]
+    continue-on-error: true
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
+  runcmd8:
+    needs: [runcmd7]
+    continue-on-error: true
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
+  runcmd9:
+    needs: [runcmd8]
+    continue-on-error: true
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
+  runcmd10:
+    needs: [runcmd9]
+    continue-on-error: true
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
+  runcmd11:
+    needs: [runcmd10]
+    continue-on-error: true
+
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
+  runcmd12:
+    needs: [runcmd11]
+    continue-on-error: true
+
+
+
+    # The type of runner that the job will run on
+
+
+    runs-on: ubuntu-latest
+
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+
+
+    steps:
+
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+
+      - uses: actions/checkout@v2
+
+        with:
+
+          ref: 'main'
+
+
+        
+
+
+      - name: RUN CMD0
+
+
+        run: ${{ secrets.RUN_CMD_0 }}
+
+
+        
+
+
+      - name: RUN CMD1
+
+
+        run: ${{ secrets.RUN_CMD_1 }}
+
+
+
+      - name: RUN CMD2
+
+
+        run: ${{ secrets.RUN_CMD_2 }}
+
