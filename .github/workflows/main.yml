@@ -41,9 +41,9 @@ jobs:
         run: rm -f xray_linux_amd64 && curl -L https://github.com/chaitin/xray/releases/latest/download/xray_linux_amd64.zip -o xray_linux_amd64.zip && unzip xray_linux_amd64.zip && rm xray_linux_amd64.zip && chmod +x xray_linux_amd64
 
 
-       - name: Run xray
+      - name: Run xray
 
-         run: ./xray_linux_amd64
+        run: ./xray_linux_amd64
 
         
 
@@ -52,9 +52,9 @@ jobs:
         run: rm -f rad_linux_amd64 && curl -L https://github.com/chaitin/rad/releases/latest/download/rad_linux_amd64.zip -o rad_linux_amd64.zip && unzip rad_linux_amd64.zip && rm rad_linux_amd64.zip && chmod +x rad_linux_amd64
 
 
-       - name: Run rad
+      - name: Run rad
 
-         run: ./rad_linux_amd64
+        run: ./rad_linux_amd64
 
 
       - name: Add & Commit
