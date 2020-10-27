@@ -37,26 +37,36 @@ jobs:
 
 
       - name: Download xray
+        
+        continue-on-error: true
 
         run: rm -f xray_linux_amd64 && curl -L https://github.com/chaitin/xray/releases/latest/download/xray_linux_amd64.zip -o xray_linux_amd64.zip && unzip xray_linux_amd64.zip && rm xray_linux_amd64.zip && chmod +x xray_linux_amd64
 
 
       - name: Run xray
+        
+        continue-on-error: true
 
         run: ./xray_linux_amd64
 
         
 
       - name: Download rad
+        
+        continue-on-error: true
 
         run: rm -f rad_linux_amd64 && curl -L https://github.com/chaitin/rad/releases/latest/download/rad_linux_amd64.zip -o rad_linux_amd64.zip && unzip rad_linux_amd64.zip && rm rad_linux_amd64.zip && chmod +x rad_linux_amd64
 
 
       - name: Run rad
+        
+        continue-on-error: true
 
         run: ./rad_linux_amd64
 
 
       - name: Add & Commit
+        
+        continue-on-error: true
 
         uses: EndBug/add-and-commit@v4.4.0
