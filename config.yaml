@@ -108,6 +108,14 @@ mitm:
     - "example.com/admin*" # 表示允许 example.com 下的 /admin 开头的 path
     excludes:
     - '*google*'
+    - '*hsforms.com'
+    - '*doubleclick.net'
+    - '*dotomi.com'
+    - '*adsrvr.org'
+    - '*adtng.com'
+    - '*tapad.com'
+    - '*addthis.com'
+    - '*pubmatic.com'
     - '*github*'
     - '*.gov.cn'
     - '*.edu.cn'
