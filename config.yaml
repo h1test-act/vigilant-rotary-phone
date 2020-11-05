@@ -143,10 +143,10 @@ basic_crawler:
 # 默认配置无法检测依赖反连平台的漏洞，这些漏洞包括 fastjson，ssrf，shiro 等
 # 新版将 RMI 服务于 HTTP 服务进行了融合，所以配置项进行了删减，但 RMI 的端口复用不适用于 nginx 反代的情况，这种情况需要手动添加 RMI 的配置，见上述文档中的说明
 reverse:
-  db_file_path: ""
-  token: ""
+  db_file_path: "mydb"
+  token: "a_verrrry_long_token"
   http:
-    enabled: true
+    enabled: false
     listen_ip: 127.0.0.1
     listen_port: ""
     # 在哪个 http header 中取 ip，为空代表从 REMOTE_ADDR 中取
@@ -154,7 +154,7 @@ reverse:
   dns:
     enabled: false
     listen_ip: 127.0.0.1
-    domain: ""
+    domain: "mydns.com"
     is_domain_name_server: false
     # 静态解析规则
     resolve:
@@ -163,9 +163,9 @@ reverse:
       value: 127.0.0.1
       ttl: 60
   client:
-    http_base_url: ""
-    dns_server_ip: ""
-    remote_server: false
+    http_base_url: "http://222.222.222.222:2020"
+    dns_server_ip: "111.111.111.111"
+    remote_server: true
 
 # 配置解释见 https://docs.xray.cool/#/configration/http
 http:
