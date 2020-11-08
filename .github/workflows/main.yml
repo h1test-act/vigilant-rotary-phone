@@ -63,6 +63,21 @@ jobs:
         continue-on-error: true
 
         run: ./rad_linux_amd64
+        
+        
+
+      - name: Download crawlergo
+        
+        continue-on-error: true
+
+        run: rm -f crawlergo && curl -L https://github.com/0Kee-Team/crawlergo/releases/latest/download/crawlergo_linux_amd64.zip -o crawlergo_linux_amd64.zip && unzip crawlergo_linux_amd64.zip && rm crawlergo_linux_amd64.zip && chmod +x crawlergo
+
+
+      - name: Run crawlergo
+        
+        continue-on-error: true
+
+        run: ./crawlergo        
 
 
       - name: Add & Commit
