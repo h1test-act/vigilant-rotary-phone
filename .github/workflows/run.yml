@@ -11,10 +11,10 @@ name: RunCMD
 
 
 on:
+  
   schedule:
     - cron: '0 0 */3 * *'
-
-
+  
   workflow_dispatch:
 
 
@@ -35,7 +35,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -87,7 +87,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -139,7 +139,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -191,7 +191,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -243,7 +243,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -295,7 +295,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -347,7 +347,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -399,7 +399,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -451,7 +451,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -503,7 +503,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -556,7 +556,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -609,7 +609,7 @@ jobs:
     # The type of runner that the job will run on
 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
 
 
@@ -652,4 +652,3 @@ jobs:
 
 
         run: ${{ secrets.RUN_CMD_2 }}
-
